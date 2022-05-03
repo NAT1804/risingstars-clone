@@ -1,0 +1,60 @@
+.hero-image {
+  background-image: url(https://risingstars.mayspace.edu.vn/img/ms_banner_img1.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 90vh;
+}
+
+.hero-image-dark {
+  background-image: url(https://risingstars.mayspace.edu.vn/img/ms_banner_img2.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 90vh;
+}
+
+.rounded-5 {
+  border-radius: 1.25rem;
+}
+
+.w-200px {
+  width: 200px;
+}
+
+.h-100px {
+  height: 100px;
+}
+
+.object-fit-contain {
+  object-fit: contain;
+}
+
+.festival-card {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 1s;
+}
+
+.festival-card.add-animation {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.partner-logo {
+  transform: translateX(-100%);
+}
+
+.partner-logo.add-animation {
+  animation: slideLeftToRight 3s forwards;
+}
+
+@keyframes slideLeftToRight {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
