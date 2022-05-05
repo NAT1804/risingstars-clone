@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rising Stars</title>
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       crossorigin="anonymous"
@@ -85,23 +96,102 @@
       </div>
     </div>
 
-    <!-- Hero Image -->
-    <div class="w-100 d-flex hero-image">
-      <div class="text-center m-auto">
-        <p class="fs-1 text-white">
-          Rising Stars International Arts Festival & Competition lần thứ III
-        </p>
-        <a href="#" class="btn btn-outline-secondary btn-lg text-white"
-          >Application Form</a
-        >
+    <!-- Hero carousel -->
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
       </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="w-100 d-flex hero-image">
+            <div class="text-center m-auto">
+              <p class="fs-1 text-white">
+                Rising Stars International Arts Festival & Competition lần thứ
+                III
+              </p>
+              <a href="#" class="btn btn-outline-secondary btn-lg text-white"
+                >Application Form</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="w-100 d-flex hero-image-dark">
+            <div class="text-center m-auto">
+              <p class="fs-1 text-white">
+                Rising Stars International Arts Festival & Competition lần thứ
+                III
+              </p>
+              <a href="#" class="btn btn-outline-secondary btn-lg text-white"
+                >Application Form</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="w-100 d-flex hero-image">
+            <div class="text-center m-auto">
+              <p class="fs-1 text-white">
+                Rising Stars International Arts Festival & Competition lần thứ
+                III
+              </p>
+              <a href="#" class="btn btn-outline-secondary btn-lg text-white"
+                >Application Form</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
 
     <!-- Section Festival Card -->
-    <section class="my-5 py-5 bg-light">
+    <section class="bg-light">
       <div class="container">
         <div class="text-center fw-bold fs-1 mb-5">Music competition 3rd</div>
-        <div class="row g-3 justify-content-between align-items-center">
+        <div
+          class="isDesktop row g-3 justify-content-between align-items-center"
+        >
           <div class="festival-card col-12 col-sm-6 col-md-4">
             <div class="text-center">
               <a href="#">
@@ -118,7 +208,7 @@
           <div class="festival-card col-12 col-sm-6 col-md-4">
             <div class="text-center">
               <img
-                src="https://risingstars.mayspace.edu.vn/public/images/component/2.png"
+                src="https://risingstars.mayspace.edu.vn/public/images/component/1.png"
                 class="card-img-top rounded-5 w-200px"
                 alt="piano"
               />
@@ -129,7 +219,7 @@
           <div class="festival-card col-12 col-sm-6 col-md-4">
             <div class="text-center">
               <img
-                src="https://risingstars.mayspace.edu.vn/public/images/component/2.png"
+                src="https://risingstars.mayspace.edu.vn/public/images/component/3.png"
                 class="card-img-top rounded-5 w-200px"
                 alt="piano"
               />
@@ -137,56 +227,141 @@
               <a href="#">Festival</a>
             </div>
           </div>
+        </div>
+        <!-- Slider main container -->
+        <div class="isMobile swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="artist-card">
+                <div class="text-center">
+                  <a href="#" class="hover-zoom">
+                    <img
+                      src="https://risingstars.mayspace.edu.vn/public/images/component/2.png"
+                      class="card-img-top rounded-5 w-200px"
+                      alt="piano"
+                    />
+                  </a>
+                  <h5 class="my-5">Piano Solo</h5>
+                  <a href="#">Pianist</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="artist-card">
+                <div class="text-center">
+                  <a href="#" class="hover-zoom">
+                    <img
+                      src="https://risingstars.mayspace.edu.vn/public/images/component/3.png"
+                      class="card-img-top rounded-5 w-200px"
+                      alt="piano"
+                    />
+                  </a>
+                  <h5 class="my-5">Piano Solo</h5>
+                  <a href="#">Pianist</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="artist-card">
+                <div class="text-center">
+                  <a href="#" class="hover-zoom">
+                    <img
+                      src="https://risingstars.mayspace.edu.vn/public/images/component/1.png"
+                      class="card-img-top rounded-5 w-200px"
+                      alt="piano"
+                    />
+                  </a>
+                  <h5 class="my-5">Piano Solo</h5>
+                  <a href="#">Pianist</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <!-- <div class="swiper-pagination"></div> -->
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <!-- <div class="swiper-scrollbar"></div> -->
         </div>
       </div>
     </section>
 
     <!-- Section Examiner -->
-    <section class="my-5 py-5">
+    <section>
       <div class="container">
         <div class="text-center fw-bold fs-1 mb-5">Examiner</div>
-        <div class="row g-3 justify-content-between align-items-center">
-          <div class="festival-card col-12 col-sm-6 col-md-4">
-            <div class="text-center">
-              <a href="#" class="hover-zoom">
-                <img
-                  src="https://risingstars.mayspace.edu.vn/public/images/component/2.png"
-                  class="card-img-top rounded-5 w-200px"
-                  alt="piano"
-                />
-              </a>
-              <h5 class="my-5">Piano solo</h5>
-              <a href="#">Festival</a>
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="artist-card">
+                <div class="text-center">
+                  <a href="#" class="hover-zoom">
+                    <img
+                      src="https://risingstars.mayspace.edu.vn/public/images/examiner/May29.jpg"
+                      class="card-img-top rounded-5 w-200px"
+                      alt="piano"
+                    />
+                  </a>
+                  <h5 class="my-5">IAN GOH BIN WEI</h5>
+                  <a href="#">Pianist</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="artist-card">
+                <div class="text-center">
+                  <a href="#" class="hover-zoom">
+                    <img
+                      src="https://risingstars.mayspace.edu.vn/public/images/examiner/May26.jpg"
+                      class="card-img-top rounded-5 w-200px"
+                      alt="piano"
+                    />
+                  </a>
+                  <h5 class="my-5">IAN GOH BIN WEI</h5>
+                  <a href="#">Pianist</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="artist-card">
+                <div class="text-center">
+                  <a href="#" class="hover-zoom">
+                    <img
+                      src="https://risingstars.mayspace.edu.vn/public/images/examiner/May24.jpg"
+                      class="card-img-top rounded-5 w-200px"
+                      alt="piano"
+                    />
+                  </a>
+                  <h5 class="my-5">IAN GOH BIN WEI</h5>
+                  <a href="#">Pianist</a>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="festival-card col-12 col-sm-6 col-md-4">
-            <div class="text-center">
-              <img
-                src="https://risingstars.mayspace.edu.vn/public/images/component/2.png"
-                class="card-img-top rounded-5 w-200px"
-                alt="piano"
-              />
-              <h5 class="my-5">Piano solo</h5>
-              <a href="#">Festival</a>
-            </div>
-          </div>
-          <div class="festival-card col-12 col-sm-6 col-md-4">
-            <div class="text-center">
-              <img
-                src="https://risingstars.mayspace.edu.vn/public/images/component/2.png"
-                class="card-img-top rounded-5 w-200px"
-                alt="piano"
-              />
-              <h5 class="my-5">Piano solo</h5>
-              <a href="#">Festival</a>
-            </div>
-          </div>
+          <!-- If we need pagination -->
+          <!-- <div class="swiper-pagination"></div> -->
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <!-- <div class="swiper-scrollbar"></div> -->
         </div>
       </div>
     </section>
 
     <!-- Section Our Partner -->
-    <section class="my-5 py-5 bg-light">
+    <section class="bg-light">
       <div class="container">
         <div class="text-center fw-bold fs-1 mb-5">Our Partner</div>
         <div class="row justify-content-start">
@@ -285,9 +460,145 @@
     </div>
 
     <!-- Section News -->
+    <section class="bg-light">
+      <div class="container">
+        <div class="text-center fw-bold fs-1 mb-5">News</div>
+        <div class="row py-4 border-top border-bottom">
+          <div class="col-md-4">
+            <img
+              src="https://risingstars.mayspace.edu.vn/public/images/posts/172474857_473105430780700_5698776266744577533_n.jpeg"
+              alt="logo"
+              class="w-100"
+            />
+          </div>
+          <div class="col-md-8">
+            <h3>
+              Final Results of the Rising Stars International Arts Festival &
+              Competition 2021
+            </h3>
+            <p>
+              RSIAF 2021 has brought together many wonderful performances by
+              young musicians.
+            </p>
+          </div>
+        </div>
+        <div class="row py-4 border-top border-bottom">
+          <div class="col-md-4">
+            <img
+              src="https://risingstars.mayspace.edu.vn/public/images/posts/172474857_473105430780700_5698776266744577533_n.jpeg"
+              alt="logo"
+              class="w-100"
+            />
+          </div>
+          <div class="col-md-8">
+            <h3>
+              Final Results of the Rising Stars International Arts Festival &
+              Competition 2021
+            </h3>
+            <p>
+              RSIAF 2021 has brought together many wonderful performances by
+              young musicians.
+            </p>
+          </div>
+        </div>
+        <div class="row py-4 border-top border-bottom">
+          <div class="col-md-4">
+            <img
+              src="https://risingstars.mayspace.edu.vn/public/images/posts/172474857_473105430780700_5698776266744577533_n.jpeg"
+              alt="logo"
+              class="w-100"
+            />
+          </div>
+          <div class="col-md-8">
+            <h3>
+              Final Results of the Rising Stars International Arts Festival &
+              Competition 2021
+            </h3>
+            <p>
+              RSIAF 2021 has brought together many wonderful performances by
+              young musicians.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <button type="button" class="btn btn-outline-secondary">
+          READ OUR BLOG
+        </button>
+      </div>
+    </section>
 
     <!-- Footer -->
+    <footer class="bg-dark text-white my-5 py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>Contact</h6>
+            <div class="address-box">
+              <div class="address-contact">
+                <i class="fa-solid fa-location-dot"></i>
+                <span class="address-content"
+                  >Mọi thông tin chi tiết về cuộc thi, chương trình vui lòng
+                  liên hệ: <br />
+                  Mrs Hằng – Đại diện 𝑴𝒂𝒚 𝑺𝒑𝒂𝒄𝒆 -Trưởng phòng đào tạo – Học viện
+                  âm nhạc 𝑴𝒂𝒚 𝑺𝒑𝒂𝒄𝒆
+                </span>
+              </div>
+              <div class="address-contact">
+                <i class="fa-solid fa-phone"></i>
+                <span class="address-content">+84. 243 877 6622</span>
+              </div>
+              <div class="address-contact">
+                <i class="fa-solid fa-phone"></i>
+                <span class="address-content">Fax: 84 96 5710 768</span>
+              </div>
+              <div class="address-contact">
+                <i class="fa-solid fa-phone"></i>
+                <span class="address-content"
+                  >Email: Mayspaceacademy@gmail.com</span
+                >
+              </div>
+              <div class="address-contact">
+                <i class="fa-solid fa-phone"></i>
+                <span class="address-content"
+                  >Địa chỉ: Số 8 Lô TT1A, ngõ 622 Minh Khai - Hà Nội.
+                </span>
+              </div>
+            </div>
+          </div>
 
+          <div class="col-xs-6 col-md-3">
+            <h6>Help</h6>
+            <ul class="footer-links">
+              <li>
+                <a href="#" style="text-decoration: none">Trợ giúp đối tác</a>
+              </li>
+              <li>
+                <a href="#" style="text-decoration: none">Trợ giúp cộng sự</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Rules</h6>
+            <ul class="footer-links">
+              <li>
+                <a href="#" style="text-decoration: none">Nội quy cộng đồng</a>
+              </li>
+              <li>
+                <a href="#" style="text-decoration: none">Quyền riêng tư</a>
+              </li>
+              <li>
+                <a href="#" style="text-decoration: none">Điều khoản sử dụng</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
       crossorigin="anonymous"
