@@ -19,6 +19,7 @@ const addObserver = (element, options) => {
 }
 
 scrollTrigger('.festival-card', { threshold: 0.5 })
+scrollTrigger('.artist-card', { threshold: 0.5 })
 scrollTrigger('.partner-logo', { threshold: 0 })
 
 const swiper = new Swiper('.swiper', {
@@ -27,22 +28,26 @@ const swiper = new Swiper('.swiper', {
   loop: true,
   // Default parameters
   slidesPerView: 1,
-  spaceBetween: 10,
+  spaceBetween: 40,
   // Responsive breakpoints
   breakpoints: {
     // when window width is >= 320px
-    320: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
+    // 320: {
+    //   slidesPerView: 2,
+    //   spaceBetween: 20,
+    // },
     // when window width is >= 480px
-    480: {
-      slidesPerView: 3,
-      spaceBetween: 30,
-    },
+    // 480: {
+    //   slidesPerView: 3,
+    //   spaceBetween: 30,
+    // },
     // when window width is >= 640px
     640: {
-      slidesPerView: 4,
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
+    780: {
+      slidesPerView: 3,
       spaceBetween: 40,
     },
   },

@@ -48,6 +48,17 @@ section {
   opacity: 1;
 }
 
+.artist-card {
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: 2s;
+}
+
+.artist-card.add-animation {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 .partner-logo {
   transform: translateX(-100%);
 }
@@ -85,7 +96,7 @@ section {
   display: flex;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
   .isMobile {
     display: block;
   }
